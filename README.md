@@ -1,20 +1,32 @@
+# Text2Emoji Gradient
+
+This repo is accompaniment to this blog entry:
+blog.paperspace.com/text2emoji/
+
+Launch this in Paperspace Gradient by clicking the link below.
+
+[![Gradient](https://assets.paperspace.io/img/gradient-badge.svg)](https://console.paperspace.com/github/gradient-ai/Text2Emoji/blob/master/text2emoji.ipynb?machine=Free-GPU)
+
 # Text2Emoji :relaxed:
+
 ![Emoji Representative](https://twistedsifter.files.wordpress.com/2015/06/the-best-text-emoticons-on-a-single-page.jpg)
 Text2Emoji is a text classification model trained on 200 sentences across 5 classes. Below fig. shows the list of emoji's on which the model is trained on. Text to the side represents a high-level emotion that the emoji depicts. :sunglasses:
 
 ## Steps to Run
+
 1. `$> python3 main.py`
 2. Open emoji.html in the browser and start typing :speech_balloon:
 
 ## Demo
-![Text2Emoji Demo](https://github.com/prakhar21/Text2Emoji/blob/master/demo.gif)
--
+
+## ![Text2Emoji Demo](https://github.com/prakhar21/Text2Emoji/blob/master/demo.gif)
 
 ## Methodology
+
 ![Flair Internal](https://github.com/prakhar21/Text2Emoji/blob/master/flair_internal1.png)
 
-
 ## Model Architecture
+
 ```
 Model: "TextClassifier(
   (document_embeddings): DocumentRNNEmbeddings(
@@ -48,6 +60,7 @@ Model: "TextClassifier(
 ```
 
 ## Technologies Used
+
 1. Flask
 2. Flair
 3. HTML/Bootstrap
