@@ -1,0 +1,17 @@
+image: paperspace/gradient-base:pt112-tf29-jax0314-py39-20220803 # container image used to run your deployment
+command: # optional command to override the container image's default command
+  - "python main.py"
+port: 5000 # local container port that your service is running on
+env: # environment variables that are applied at run time
+  - name: ENV
+    value: VAR
+repositories:
+  dataset: dsn5817kdge2ywf # the ID of the dataset you want to sync the repository with
+  mountPath: ./ # the  local filepath you want to sync the repos to inside your deployment
+  repositories:
+    - url: https://github.com/gradient-ai/Text2Emoji.git # the URL of the repository
+      ref: main # optionally, a git branch, commit, or tag to check out
+      name: Text2Emoji # the folder name you want to clone the repo into
+resources:
+  replicas: 1 # number of replicas used for your deployment
+  instanceType: P4000 # instance type that your deployment will run on
